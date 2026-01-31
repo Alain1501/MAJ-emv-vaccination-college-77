@@ -6,7 +6,6 @@ media_folder: "img"
 public_folder: "img"
 
 publish_mode: simple
-
 locale: "fr"
 
 collections:
@@ -20,48 +19,57 @@ collections:
         format: "json"
         fields:
 
-          - label: "Signature"
-            name: "intro.signature"
-            widget: "string"
-
-          - label: "Texte d’introduction"
-            name: "intro.text"
+          - label: "Introduction"
+            name: "intro"
             widget: "object"
             fields:
-              - { label: "Français", name: "fr", widget: "text" }
-              - { label: "English", name: "en", widget: "text", required: false }
-              - { label: "العربية", name: "ar", widget: "text", required: false }
-              - { label: "Türkçe", name: "tr", widget: "text", required: false }
-              - { label: "پښتو", name: "ps", widget: "text", required: false }
-              - { label: "Kurdî", name: "ku", widget: "text", required: false }
 
-          - label: "Ressources – Documents"
-            name: "resources.forms"
-            widget: "list"
-            fields:
-              - { label: "ID", name: "id", widget: "string" }
-              - label: "Titre"
-                name: "label"
+              - label: "Signature"
+                name: "signature"
+                widget: "string"
+
+              - label: "Texte"
+                name: "text"
                 widget: "object"
                 fields:
-                  - { label: "Français", name: "fr", widget: "string" }
-                  - { label: "English", name: "en", widget: "string", required: false }
-                  - { label: "العربية", name: "ar", widget: "string", required: false }
-              - { label: "Fichier PDF", name: "url", widget: "string" }
+                  - { label: "Français", name: "fr", widget: "text" }
+                  - { label: "English", name: "en", widget: "text", required: false }
+                  - { label: "العربية", name: "ar", widget: "text", required: false }
+                  - { label: "Türkçe", name: "tr", widget: "text", required: false }
+                  - { label: "پښتو", name: "ps", widget: "text", required: false }
+                  - { label: "Kurdî", name: "ku", widget: "text", required: false }
 
-          - label: "Ressources – Vidéos"
-            name: "resources.videos"
-            widget: "list"
+          - label: "Ressources"
+            name: "resources"
+            widget: "object"
             fields:
-              - { label: "ID", name: "id", widget: "string" }
-              - label: "Titre"
-                name: "title"
-                widget: "object"
+
+              - label: "Formulaires"
+                name: "forms"
+                widget: "list"
                 fields:
-                  - { label: "Français", name: "fr", widget: "string" }
-                  - { label: "English", name: "en", widget: "string", required: false }
-                  - { label: "العربية", name: "ar", widget: "string", required: false }
-              - { label: "URL vidéo", name: "url", widget: "string" }
+                  - { label: "ID", name: "id", widget: "string" }
+                  - label: "Titre"
+                    name: "label"
+                    widget: "object"
+                    fields:
+                      - { label: "Français", name: "fr", widget: "string" }
+                      - { label: "English", name: "en", widget: "string", required: false }
+                      - { label: "العربية", name: "ar", widget: "string", required: false }
+                  - { label: "URL PDF", name: "url", widget: "string" }
+
+              - label: "Vidéos"
+                name: "videos"
+                widget: "list"
+                fields:
+                  - { label: "ID", name: "id", widget: "string" }
+                  - label: "Titre"
+                    name: "title"
+                    widget: "object"
+                    fields:
+                      - { label: "Français", name: "fr", widget: "string" }
+                      - { label: "English", name: "en", widget: "string", required: false }
+                  - { label: "URL vidéo", name: "url", widget: "string" }
 
   - name: "faq"
     label: "FAQ"
