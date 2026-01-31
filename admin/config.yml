@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: Alain1501/MAJ-emv-vaccination-college-77
+  name: git-gateway
   branch: main
-  auth_type: oauth
-  app_id: Ov23liFIooL9np0Fhx70
 
 media_folder: "img"
 public_folder: "/img"
