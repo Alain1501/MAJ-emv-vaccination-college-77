@@ -7,23 +7,35 @@ public_folder: "/img"
 
 collections:
   - name: "intro"
-    label: "Introduction"
-    files:
-      - name: "intro"
-        label: "Texte d’introduction"
-        file: "intro_resources.json"
-        fields:
-          - label: "Texte français"
-            name: "intro.text.fr"
-            widget: "text"
+  label: "Introduction"
+  files:
+    - name: "intro"
+      label: "Texte d’introduction"
+      file: "intro_resources.json"
+      fields:
+        - label: "Texte (FR)"
+          name: "text"
+          widget: object
+          fields:
+            - label: "Français"
+              name: "fr"
+              widget: text
+
 
   - name: "faq"
-    label: "FAQ"
-    files:
-      - name: "faq"
-        label: "Questions / Réponses"
-        file: "faq.json"
-        fields:
-          - label: "Contenu brut"
-            name: "items"
-            widget: "text"
+  label: "FAQ"
+  files:
+    - name: "faq"
+      label: "Questions / Réponses"
+      file: "faq.json"
+      fields:
+        - label: "Questions"
+          name: "items"
+          widget: list
+          fields:
+            - label: "Question"
+              name: "question"
+              widget: string
+            - label: "Réponse"
+              name: "answer"
+              widget: text
