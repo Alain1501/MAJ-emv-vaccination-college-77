@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: Alain1501/MAJ-emv-vaccination-college-77
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "intro"
+    label: "Introduction"
+    files:
+      - name: "intro"
+        label: "Texte d’introduction"
+        file: "intro_resources.json"
+        fields:
+          - label: "Texte français"
+            name: "intro.text.fr"
+            widget: "text"
+
+  - name: "faq"
+    label: "FAQ"
+    files:
+      - name: "faq"
+        label: "Questions / Réponses"
+        file: "faq.json"
+        fields:
+          - label: "Contenu brut"
+            name: "items"
+            widget: "text"
